@@ -1,152 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Assembleia de Deus - Piracicaba</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assembleia de Deus - Piracicaba</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #1a2a44;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+}
 
-    header {
-      background: linear-gradient(135deg, #0d2b5c, #1e4fa1);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+/* MENU */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 40px;
-      letter-spacing: 2px;
-    }
+nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: #1e3c72;
+  font-weight: bold;
+}
 
-    header h2 {
-      margin: 10px 0;
-      font-weight: 300;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(13,43,92,0.8), rgba(30,79,161,0.8)),
+              url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    .destaque {
-      color: #f5b400;
-      font-weight: bold;
-    }
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+}
 
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+.hero h2 {
+  font-weight: 300;
+}
 
-    .sobre {
-      background: white;
-    }
+.destaque {
+  color: #f5b400;
+}
 
-    .cultos {
-      background: #eef3fb;
-    }
+/* SEÇÕES */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
+.sobre {
+  background: white;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      width: 220px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-bottom: 4px solid #f5b400;
-    }
+.sobre p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
 
-    .card h3 {
-      margin: 10px 0;
-      color: #1e4fa1;
-    }
+/* CULTOS */
+.cultos {
+  background: #eef3fb;
+}
 
-    .hora {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #0d2b5c;
-    }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
 
-    footer {
-      background: #0d2b5c;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+.card {
+  background: white;
+  width: 220px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #1e4fa1;
+}
+
+.hora {
+  margin-top: 10px;
+  font-weight: bold;
+  background: #1e4fa1;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* RODAPÉ */
+footer {
+  background: #0d2b5c;
+  color: white;
+  padding: 30px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<nav>
+  <div><strong>AD Piracicaba</strong></div>
+  <div>
+    <a href="#">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#cultos">Cultos</a>
+    <a href="#">Contato</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
     <h1>ASSEMBLEIA DE DEUS</h1>
     <h2>Ministério de Madureira</h2>
     <p class="destaque">Campo Piracicaba - Regional 13</p>
     <p>Caruaru - Pernambuco</p>
-  </header>
+  </div>
+</div>
 
-  <section class="sobre">
-    <h2>Sobre nós</h2>
-    <p>
-      Somos uma igreja comprometida com a Palavra de Deus, com a transformação de vidas
-      e com o amor ao próximo. Nosso propósito é edificar famílias e alcançar vidas.
-    </p>
-  </section>
+<section id="sobre" class="sobre">
+  <h2>Sobre nós</h2>
+  <p>
+    Somos uma igreja comprometida com a Palavra de Deus, com a transformação de vidas
+    e o amor ao próximo. Nosso propósito é edificar famílias e alcançar vidas.
+  </p>
+</section>
 
-  <section class="cultos">
-    <h2>Horários dos Cultos</h2>
+<section id="cultos" class="cultos">
+  <h2>Horários dos Cultos</h2>
 
-    <div class="cards">
+  <div class="cards">
 
-      <div class="card">
-        <h3>Culto da Família</h3>
-        <p>Domingo</p>
-        <div class="hora">18:00</div>
-      </div>
-
-      <div class="card">
-        <h3>Culto de Oração</h3>
-        <p>Sexta-feira</p>
-        <div class="hora">19:00</div>
-      </div>
-
-      <div class="card">
-        <h3>Culto de Ensino</h3>
-        <p>Terça-feira</p>
-        <div class="hora">19:30</div>
-      </div>
-
-      <div class="card">
-        <h3>Ceia do Senhor</h3>
-        <p>2º Domingo</p>
-        <div class="hora">18:00</div>
-      </div>
-
-      <div class="card">
-        <h3>Consagração</h3>
-        <p>Sexta-feira</p>
-        <div class="hora">08:00</div>
-      </div>
-
+    <div class="card">
+      <h3>Culto da Família</h3>
+      <p>Domingo</p>
+      <div class="hora">18:00</div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Assembleia de Deus - Ministério de Madureira</p>
-    <p>Campo Piracicaba - Regional 13</p>
-  </footer>
+    <div class="card">
+      <h3>Culto de Oração</h3>
+      <p>Sexta-feira</p>
+      <div class="hora">19:00</div>
+    </div>
+
+    <div class="card">
+      <h3>Culto de Ensino</h3>
+      <p>Terça-feira</p>
+      <div class="hora">19:30</div>
+    </div>
+
+    <div class="card">
+      <h3>Ceia do Senhor</h3>
+      <p>2º Domingo</p>
+      <div class="hora">18:00</div>
+    </div>
+
+    <div class="card">
+      <h3>Consagração</h3>
+      <p>Sexta-feira</p>
+      <div class="hora">08:00</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Assembleia de Deus - Ministério de Madureira</p>
+  <p>Campo Piracicaba - Regional 13 | Caruaru - PE</p>
+</footer>
 
 </body>
 </html>
